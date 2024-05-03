@@ -7,7 +7,14 @@
   height: 100svh;
   margin: 0 auto;
 }
-
-.main_content_title {
-  margin-top: 100px;
+.main_content {
+  display: grid;
+  justify-items: center;
+  .main_content_title {
+    margin-top: 100px;
+  }
+  .section {
+    display: relative;
+    width: 100vw;
+  }
 }

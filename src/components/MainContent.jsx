@@ -1,10 +1,9 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
-import "../styles/MainContent.scss";
 
 function MainContent({ title, children }) {
   return (
-    <>
+    <div className="main_content">
       <motion.h1
         initial={{ y: -100, opacity: 0.5 }}
         animate={{ y: 0, opacity: 1 }}
@@ -13,8 +12,8 @@ function MainContent({ title, children }) {
       >
         {title}
       </motion.h1>
-      <section>{children}</section>
-    </>
+      <section className="section">{children}</section>
+    </div>
   );
 }
 export default MainContent;
