@@ -2,11 +2,9 @@
 import "../styles/Webs.scss";
 import { motion } from "framer-motion";
 
-function Website({ webName, title, comment, imgCount, children }) {
-  const imageNumbers = Array.from(
-    { length: imgCount },
-    (_, index) => index + 1
-  );
+function Website({ webName, title, comment, img }) {
+  const imageNumbers = Array.from({ length: img }, (_, index) => index + 1);
+  console.log(imageNumbers);
   let a = webName.replace(" ", "_");
   let b = a.toLowerCase();
   return (
@@ -17,7 +15,6 @@ function Website({ webName, title, comment, imgCount, children }) {
       id={b + "_project"}
       className="web_project"
     >
-      {children}
       {imageNumbers.map((num) => (
         <img
           key={num}

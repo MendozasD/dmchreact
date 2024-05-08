@@ -9,14 +9,14 @@ export default function Webs() {
           webName="franklogemann"
           title="Frank Logemann"
           comment="Whatever is just a the title"
-          imgCount={3}
+          img={3}
         />
         <Website
           webName="rolfsommer"
           title="Rolf Sommer"
           comment="Whatever is just a the title"
-          imgCount={2}
-        ></Website>
+          img={2}
+        />
       </MainContent>
     </>
   );

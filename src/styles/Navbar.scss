@@ -24,6 +24,8 @@ header {
     text-align: left;
     line-height: 1;
     text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.5px;
   }
   #menu_list {
     width: 85%;
