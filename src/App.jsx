@@ -1,6 +1,7 @@
 import "./styles/App.scss";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import { app, analytics } from "./config/firebase";
 import HomePage from "./pages/Home";
 import Illustrations from "./pages/Illustrations";
 import Webs from "./pages/Webs";
@@ -21,6 +22,8 @@ import Navbar from "./components/Navbar";
 // ]);
 
 function App() {
+  console.log(app, analytics);
+
   // useLocation is provided by React Router and serves its purpose by
   // giving the window.location of a route to control AnimatePresence
   const location = useLocation();
