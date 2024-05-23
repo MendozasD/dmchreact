@@ -1,8 +1,7 @@
 import "../styles/Navbar.scss";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import Logo from "./Logo";
 
 // NAVBAR WORKS CORRECTLY BUT THE EXIT ANIMATION HANDLED BY FRAMER MOTION
 // IS NOT WORKING BECAUSE THE NAVBAR COMPONENT IS OUTSIDE THE ANIMATION-PRESENCE
@@ -10,20 +9,41 @@ import Logo from "./Logo";
 function Navbar() {
   const [mobile, setMobile] = useState(window.innerWidth >= 720 ? false : true);
   const [showDropdown, setShowDropdown] = useState(false);
+  const location = useLocation();
+  const currentPath = location.pathname;
+
+  // LOGO
+  function Logo() {
+    return (
+      <>
+        <div id="logo">
+          <Link to="/">
+            <p style={{ color: currentPath === "/" && "white" }}>
+              {"David"}
+              <br />
+              {"Mendoza"}
+            </p>
+          </Link>
+        </div>
+      </>
+    );
+  }
 
   // MANAGING RESIZING AND RESPONSIVE OUTPUT
   window.addEventListener("resize", () => {
     window.innerWidth >= 720 ? setMobile(false) : setMobile(true);
   });
   // MANAGING RESIZING AND RESPONSIVE OUTPUT
-  ////
+  ////////////////////////////////
   // SHOW OR HIDE DROPDOWN
   function handleClick() {
     setShowDropdown((showDropdown) => !showDropdown);
   }
   // SHOW OR HIDE DROPDOWN
 
+  // SHOW DROPDOWN ICON OR FLEX MENU LIST
   function menuType() {
+    // RENDER DROPDOWN ICON WHEN MOBILE
     const dropdownIcon = (
       <motion.button id="dropdown_icon" onClick={handleClick}>
         <motion.span className="bar"></motion.span>
@@ -31,16 +51,26 @@ function Navbar() {
         <motion.span className="bar"></motion.span>
       </motion.button>
     );
+    // SHOW FLEX MENU LIST WHEN DESKTOP
     const menuDesktop = (
       <>
         <motion.span whileHover={{ translateY: -5 }}>
-          <Link to="/webs">Webs</Link>
+          <Link to="/webs" style={{ color: currentPath === "/" && "white" }}>
+            Webs
+          </Link>
         </motion.span>
         <motion.span whileHover={{ translateY: -5 }}>
-          <Link to="/illustrations">Illustrations</Link>
+          <Link
+            to="/illustrations"
+            style={{ color: currentPath === "/" && "white" }}
+          >
+            Illustrations
+          </Link>
         </motion.span>
         <motion.span whileHover={{ translateY: -5 }}>
-          <Link to="/about">About me</Link>
+          <Link to="/about" style={{ color: currentPath === "/" && "white" }}>
+            About me
+          </Link>
         </motion.span>
       </>
     );
@@ -74,7 +104,7 @@ function Navbar() {
     <>
       <header>
         <nav>
-          <Logo />
+          {Logo()}
           <div id="menu_list">{menuType()}</div>
         </nav>
       </header>
@@ -82,4 +112,5 @@ function Navbar() {
     </>
   );
 }
+
 export default Navbar;

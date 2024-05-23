@@ -22,8 +22,6 @@ import Navbar from "./components/Navbar";
 // ]);
 
 function App() {
-  console.log(app, analytics);
-
   // useLocation is provided by React Router and serves its purpose by
   // giving the window.location of a route to control AnimatePresence
   const location = useLocation();
