@@ -26,12 +26,19 @@
     border-radius: 280px 280px 0 0;
     padding-top: 10%;
     //GLASS
-    background: rgba(255, 255, 255, 0.8);
+    // background: rgba(255, 255, 255, 0.8);
+    background: rgb(0, 147, 224);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 147, 224, 0.011664040616246485) 0%,
+      rgba(0, 147, 224, 1) 53%
+    );
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     //GLASS
+    border: 5px $segundo dotted;
     &::before {
       content: "";
       position: inherit;

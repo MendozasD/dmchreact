@@ -5,7 +5,10 @@ export default function Webs() {
   return (
     <>
       <MainContent title="Web Design">
-        <Website webName="Whatever" comment="Whatever is just a the title" />
+        <Website
+          webName="Rolf Sommer"
+          comment="Schauspieler, Regiesseur, Texter"
+        />
         <Website webName="Nonesense" />
       </MainContent>
     </>

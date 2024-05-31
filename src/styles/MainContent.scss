@@ -1,5 +1,10 @@
 @import "./variables";
 
-#main_content {
+.main_content {
   overflow: hidden;
+  display: grid;
+  width: 95%;
+  .main_content_title {
+    text-align: center;
+  }
 }

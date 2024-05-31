@@ -5,7 +5,7 @@ function Website({ webName, comment }) {
   return (
     <div id={b + "_project"}>
       <h2>{webName}</h2>
-      {comment && <p>comment</p>}
+      <p>{comment}</p>
     </div>
   );
 }

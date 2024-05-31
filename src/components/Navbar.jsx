@@ -16,7 +16,7 @@ function Navbar() {
   function Logo() {
     return (
       <>
-        <div id="logo">
+        <motion.div id="logo" whileHover={{ filter: "blur(1px)" }}>
           <Link to="/">
             <p style={{ color: currentPath === "/" && "white" }}>
               {"David"}
@@ -24,7 +24,7 @@ function Navbar() {
               {"Mendoza"}
             </p>
           </Link>
-        </div>
+        </motion.div>
       </>
     );
   }
