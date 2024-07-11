@@ -1,12 +1,11 @@
 import "./styles/App.scss";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import { app, analytics } from "./config/firebase";
 import HomePage from "./pages/Home";
 import Illustrations from "./pages/Illustrations";
 import Webs from "./pages/Webs";
 import About from "./pages/About";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 
 // const router = createBrowserRouter([
 //   {
@@ -27,7 +26,6 @@ function App() {
   const location = useLocation();
   return (
     <>
-      <Navbar />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<HomePage />} />

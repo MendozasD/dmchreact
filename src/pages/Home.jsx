@@ -1,14 +1,9 @@
-import { useEffect } from "react";
 import { motion } from "framer-motion";
 import "../styles/Home.scss";
 import main_foto from "/images/main_foto.png";
 import HomeBubble from "../components/HomeBubble";
 
 export default function HomePage() {
-  useEffect(() => {
-    console.log("Hello");
-  });
-
   return (
     <>
       <div id="home">
@@ -35,10 +30,43 @@ export default function HomePage() {
         >
           <img src={main_foto} alt="David Mendoza, main photo" id="main_foto" />
           <HomeBubble
+            bubbleColor={"#0093e0"}
             topBubble={"Hello"}
             bottomBubble={"I'm David"}
-            right={"10%"}
-            zIndex={2}
+            styling={{ right: "10%", transform: "rotate(-10grad)" }}
+          />
+          <HomeBubble
+            bubbleColor={"#f8da18"}
+            topBubble={"i_make"}
+            bottomBubble={"web_pages"}
+            link={"webs"}
+            styling={{
+              left: "0%",
+              top: "20%",
+              transform: "rotate(10grad)",
+            }}
+          />
+          <HomeBubble
+            bubbleColor={"#e3b4db"}
+            topBubble={"more"}
+            bottomBubble={"about_me"}
+            link={"about"}
+            styling={{
+              right: "5%",
+              top: "35%",
+              transform: "rotate(10grad)",
+            }}
+          />
+          <HomeBubble
+            bubbleColor={"#669f63"}
+            topBubble={"i_draw"}
+            bottomBubble={"illustrations"}
+            link={"illustrations"}
+            styling={{
+              left: "5%",
+              bottom: "20%",
+              transform: "rotate(-20grad)",
+            }}
           />
         </motion.div>
       </div>

@@ -1,20 +1,12 @@
 /* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
 
-function HomeBubble({
-  topBubble,
-  bottomBubble,
-  left = null,
-  right = null,
-  zIndex = 1,
-}) {
+function HomeBubble({ topBubble, bottomBubble, styling, bubbleColor, link }) {
   return (
-    <div
-      className="home_bubble"
-      style={{ left: left, right: right, zIndex: zIndex }}
-    >
-      <p>{topBubble}</p>
-      <p>{bottomBubble}</p>
-    </div>
+    <Link to={`/${link}`} className="home_bubble" style={{ ...styling }}>
+      <p style={{ backgroundColor: bubbleColor }}>{topBubble}</p>
+      <p style={{ backgroundColor: bubbleColor }}>{bottomBubble}</p>
+    </Link>
   );
 }
 export default HomeBubble;
