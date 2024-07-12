@@ -1,4 +1,5 @@
 import "./styles/App.scss";
+import "./styles/Background.scss";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import HomePage from "./pages/Home";
@@ -26,6 +27,10 @@ function App() {
   const location = useLocation();
   return (
     <>
+      <div id="background">
+        <span id="bubble_top" className="background_bubble"></span>
+        <span id="bubble_bottom" className="background_bubble"></span>
+      </div>
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<HomePage />} />

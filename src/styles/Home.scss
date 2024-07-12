@@ -6,28 +6,6 @@
   position: absolute;
   inset: 0;
   overflow: hidden;
-  #background_container {
-    position: absolute;
-    inset: 0;
-    background-color: $gray;
-    .bg_buble {
-      position: absolute;
-      width: 60vb;
-      height: 60vb;
-      border-radius: 100%;
-      filter: blur(50px);
-    }
-    #bg_bubble_bottom {
-      bottom: -10%;
-      right: -10%;
-      background-color: $yellow;
-    }
-    #bg_bubble_top {
-      left: -10%;
-      top: -10%;
-      background-color: $blue;
-    }
-  }
 }
 
 #img_container {
@@ -36,26 +14,25 @@
   justify-content: center;
   bottom: 0;
   #main_foto {
+    min-width: 40vw;
     position: relative;
     bottom: 0px;
-    width: 900px;
     z-index: $zindex-main-foto;
   }
-
-  // BUTTONS
+  // BUBBLES
   .home_bubble {
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: black;
-    font-size: 4rem;
+    font-size: 3rem;
     z-index: 2;
     p {
       margin: 0;
       line-height: 1;
       padding: 10px 3.5rem;
-      border: 4px solid black;
+      border: 3px solid black;
       border-radius: 40px;
     }
     p:first-child {
@@ -63,10 +40,8 @@
       z-index: 1;
     }
   }
+
   @media only screen and (max-width: 768px) {
-    #main_foto {
-      width: 150%;
-    }
     .home_bubble {
       font-size: 2.5rem;
       p {

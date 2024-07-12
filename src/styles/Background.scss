@@ -1,0 +1,28 @@
+@import "./variables";
+
+$bubble_x_y: 70vh;
+$neg_bubble_value: calc($bubble_x_y / 2);
+
+#background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  .background_bubble {
+    display: block;
+    position: absolute;
+    width: $bubble_x_y;
+    height: $bubble_x_y;
+    border-radius: 50%;
+    filter: blur(150px);
+  }
+  #bubble_top {
+    background-color: $orange;
+    left: -($neg_bubble_value);
+    top: -($neg_bubble_value);
+  }
+  #bubble_bottom {
+    background-color: $green;
+    bottom: -($neg_bubble_value);
+    right: -($neg_bubble_value);
+  }
+}
