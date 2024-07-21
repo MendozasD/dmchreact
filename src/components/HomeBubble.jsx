@@ -18,8 +18,8 @@ function HomeBubble({
         style={{ ...styling }}
         initial={{ ...initial, scale: 0.5, opacity: 0 }}
         animate={{ ...animate, scale: 1, opacity: 1 }}
-        transition={{ duration: 0.7, delay: 0.5 }}
-        exit={{ scale: 0, opacity: 0, rotate: 0, y: 500 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        exit={{ scale: 0, opacity: 0, rotate: 0 }}
       >
         <Link to={`/${link}`}>
           <p style={{ backgroundColor: bubbleColor }}>{topBubble}</p>

@@ -36,6 +36,7 @@ function Navigation() {
       id="navigation"
       initial={{ y: 100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
+      exit={{ y: 100 }}
     >
       {filteredLinks.map((link) => (
         <Link key={link.to} to={link.to} id={link.id} className={link.class}>
