@@ -32,7 +32,11 @@ function Navigation() {
   const filteredLinks = links.filter((link) => link.to !== currentPath);
 
   return (
-    <motion.nav id="navigation">
+    <motion.nav
+      id="navigation"
+      initial={{ y: 100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+    >
       {filteredLinks.map((link) => (
         <Link key={link.to} to={link.to} id={link.id} className={link.class}>
           {link.label}
