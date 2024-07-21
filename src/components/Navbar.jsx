@@ -1,7 +1,7 @@
-import "../styles/Navbar.scss";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
+import "../styles/Navbar.scss";
 
 // NAVBAR WORKS CORRECTLY BUT THE EXIT ANIMATION HANDLED BY FRAMER MOTION
 // IS NOT WORKING BECAUSE THE NAVBAR COMPONENT IS OUTSIDE THE ANIMATION-PRESENCE

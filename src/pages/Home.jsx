@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import "../styles/Home.scss";
 import main_foto from "/images/main_foto.png";
 import HomeBubble from "../components/HomeBubble";
+import "../styles/Home.scss";
 
 export default function HomePage() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -27,24 +27,32 @@ export default function HomePage() {
   return (
     <>
       <div id="home">
-        <motion.div
-          id="img_container"
-          initial={{ y: 100 }}
-          animate={{
-            y: 0,
-            transition: { duration: 0.7 },
-          }}
-          exit={{ opacity: 0, transition: { duration: 0.4 } }}
-        >
-          <img src={main_foto} alt="David Mendoza, main photo" id="main_foto" />
+        <div id="img_container">
+          <motion.img
+            initial={{ y: 100, filter: "blur(10px)", scale: 0.7 }}
+            animate={{
+              y: 0,
+              transition: { duration: 0.7 },
+              filter: " blur(0px)",
+              scale: 1,
+            }}
+            exit={{
+              filter: "blur(10px)",
+              opacity: 0,
+              transition: { duration: 0.4 },
+            }}
+            src={main_foto}
+            alt="David Mendoza, main photo"
+            id="main_foto"
+          />
           <HomeBubble
             bubbleColor={"#0093e0"}
             topBubble={"Hello"}
             bottomBubble={"I'm David"}
             styling={{
               right: isMobile ? "20%" : "-10%",
-              transform: "rotate(-10grad)",
             }}
+            animate={{ rotate: -20 }}
           />
           <HomeBubble
             bubbleColor={"#f8da18"}
@@ -54,8 +62,8 @@ export default function HomePage() {
             styling={{
               left: isMobile ? "15%" : "-20%",
               top: "20%",
-              transform: "rotate(10grad)",
             }}
+            animate={{ rotate: 10 }}
           />
           <HomeBubble
             bubbleColor={"#e3b4db"}
@@ -65,8 +73,8 @@ export default function HomePage() {
             styling={{
               right: isMobile ? "15%" : "-10%",
               top: "35%",
-              transform: "rotate(10grad)",
             }}
+            animate={{ rotate: 10 }}
           />
           <HomeBubble
             bubbleColor={"#669f63"}
@@ -76,10 +84,10 @@ export default function HomePage() {
             styling={{
               left: isMobile ? "20%" : "-5%",
               bottom: "20%",
-              transform: "rotate(-20grad)",
             }}
+            animate={{ rotate: -10 }}
           />
-        </motion.div>
+        </div>
       </div>
     </>
   );
