@@ -7,7 +7,7 @@ $neg_bubble_value: calc($bubble_x_y / 2);
   z-index: -1;
   position: absolute;
   inset: 0;
-  overflow: hidden;
+  // overflow: hidden;
   .background_bubble {
     display: block;
     position: absolute;

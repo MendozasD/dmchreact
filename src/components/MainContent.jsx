@@ -20,8 +20,8 @@ function MainContent({ title, children }) {
           {title}
         </motion.h1>
         <section className="content">{children}</section>
-        <Navigation />
       </div>
+      <Navigation></Navigation>
     </>
   );
 }

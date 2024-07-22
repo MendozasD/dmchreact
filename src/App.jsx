@@ -6,6 +6,7 @@ import HomePage from "./pages/Home";
 import Illustrations from "./pages/Illustrations";
 import Webs from "./pages/Webs";
 import About from "./pages/About";
+
 // import Navbar from "./components/Navbar";
 
 // const router = createBrowserRouter([

@@ -17,11 +17,11 @@
 
 a {
   font-weight: 500;
-  color: $blue;
   text-decoration: inherit;
 }
 
 body {
+  position: fixed;
   margin: 0;
   display: flex;
   place-items: center;
@@ -35,8 +35,8 @@ h1 {
 }
 
 button {
-  border: 1px solid transparent;
   font-family: inherit;
+  color: black;
   cursor: pointer;
 }
 
