@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Navigation from "./Navigation";
 import "../styles/MainContent.scss";
 
 function MainContent({ title, children }) {
+  let currentLocation = useLocation().pathname;
+  let location = currentLocation.slice(1);
   return (
     <>
       <div className="main_content">
@@ -19,7 +21,7 @@ function MainContent({ title, children }) {
           </Link>
           {title}
         </motion.h1>
-        <section className="content">{children}</section>
+        <section id={location + "content"}>{children}</section>
       </div>
       <Navigation></Navigation>
     </>

@@ -1,8 +1,11 @@
 @import "./variables";
 
+body {
+  margin: 0;
+}
+
 :root {
   font-family: "Pramukh Rounded", sans-serif;
-  line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
@@ -16,28 +19,7 @@
 }
 
 a {
-  font-weight: 500;
   text-decoration: inherit;
-}
-
-body {
-  position: fixed;
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  font-family: inherit;
-  color: black;
-  cursor: pointer;
 }
 
 @media (prefers-color-scheme: light) {

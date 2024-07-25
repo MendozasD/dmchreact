@@ -1,7 +1,6 @@
 @import "./variables";
 
 .main_content {
-  overflow: hidden;
   display: grid;
   width: 95%;
   .main_content_title {
@@ -16,6 +15,9 @@
       left: 10px;
       width: fit-content;
     }
+  }
+  .content {
+    margin-top: 50px;
   }
 }
 
