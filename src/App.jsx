@@ -6,6 +6,7 @@ import HomePage from "./pages/Home";
 import Illustrations from "./pages/Illustrations";
 import Webs from "./pages/Webs";
 import About from "./pages/About";
+import RandomStar from "./components/RandomStar";
 
 // import Navbar from "./components/Navbar";
 
@@ -28,10 +29,10 @@ function App() {
   const location = useLocation();
   return (
     <>
-      <div id="background">
+      {/* <div id="background">
         <span id="bubble_top" className="background_bubble"></span>
         <span id="bubble_bottom" className="background_bubble"></span>
-      </div>
+      </div> */}
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<HomePage />} />
@@ -40,6 +41,7 @@ function App() {
           <Route path="/webs" element={<Webs />} />
         </Routes>
       </AnimatePresence>
+      <RandomStar />
     </>
   );
 }
