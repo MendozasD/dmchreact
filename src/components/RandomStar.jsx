@@ -15,7 +15,7 @@ function getRandomPosition() {
 }
 
 // eslint-disable-next-line react/prop-types
-function RandomPositionComponent({ numStars = 10 }) {
+function RandomPositionComponent({ numStars = 20 }) {
   const [positions, setPositions] = useState(
     Array.from({ length: numStars }, () => getRandomPosition())
   );
@@ -54,10 +54,11 @@ function RandomPositionComponent({ numStars = 10 }) {
         >
           <motion.img
             src={stars[index % stars.length]}
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 0, rotate: 0 }}
             animate={{
               opacity: 0.7,
               scale: 0.3,
+              rotate: Math.random() * 360,
             }}
             transition={{ delay: index * 0.5 }} // Add delay based on index
             style={{ position: "absolute" }}
