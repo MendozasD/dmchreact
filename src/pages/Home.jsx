@@ -29,12 +29,13 @@ export default function HomePage() {
       <div id="home">
         <div id="img_container">
           <motion.img
-            initial={{ y: 100, filter: "blur(10px)", scale: 0.7 }}
+            id="main_foto"
+            alt="David Mendoza, main photo"
+            initial={{ y: 100, filter: "blur(10px)" }}
             animate={{
               y: 0,
               transition: { duration: 0.7 },
               filter: " blur(0px)",
-              scale: 1,
             }}
             exit={{
               filter: "blur(10px)",
@@ -42,8 +43,6 @@ export default function HomePage() {
               transition: { duration: 0.4 },
             }}
             src={main_foto}
-            alt="David Mendoza, main photo"
-            id="main_foto"
           />
           <HomeBubble
             bubbleColor={"#0093e0"}
